@@ -30,6 +30,9 @@ map <F3> :call PyToggleBool()<CR>
 " map <silent> <F2> :call Co(&ft)<CR>
 map <F2> :TComment<CR>
 map <F4> :NERDTreeToggle<CR>
+map <F6> :!/usr/local/bin/ctags -R --python-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
 
 "NERDTree madness
 let NERDTreeIgnore = ['\.swp$', '\.pyc$']
@@ -37,6 +40,9 @@ let NERDChristmasTree = 1
 
 "Enable omni complete functionality
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
+
+let processing_doc_path="/Applications/Processing/Contents/Resources/Java/reference"
+
 
 :ab pysc import pylab as *
 \<CR>import os
