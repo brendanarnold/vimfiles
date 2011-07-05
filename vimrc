@@ -31,6 +31,7 @@ map <F3> :call PyToggleBool()<CR>
 map <F2> :TComment<CR>
 map <F4> :NERDTreeToggle<CR>
 map <F6> :!/usr/local/bin/ctags -R --python-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <F5> :call ToggleNotepadTabs()<CR>
 
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
 
