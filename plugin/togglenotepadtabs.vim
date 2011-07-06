@@ -7,6 +7,7 @@
         :set shiftwidth=8
         :set softtabstop=8
         :set noexpandtab
+        :set nowrap
         :let b:NotepadTabs=1
         :echo "Using Notepad style tabs"
     :else
@@ -15,6 +16,7 @@
         :set softtabstop=4
         :set expandtab
         :let b:NotepadTabs=0
+        :set wrap
         :echo "Using Java style tabs"
     :endif
 :endfunction
