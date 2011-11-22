@@ -36,7 +36,7 @@ map <F5> :call ToggleNotepadTabs()<CR>
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
 
 " NERDTree madness
-autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree
 let NERDTreeIgnore = ['\.swp$', '\.pyc$']
 let NERDChristmasTree = 1
 " Automatically quits NERDTree when last buffer quitted
