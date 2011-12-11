@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Applications/RapidWeaver.app/Contents/Resources/Themes/5.0 Themes/Avantgarde.rwtheme'
+let g:netrw_dirhist_2='/Users/brendan/Scripts/OpenVimHere.app'
+let g:netrw_dirhist_3='/Users/brendan/Scripts/OpenInTextMate.app'
+let g:netrw_dirhist_4='/Users/brendan/Scripts/OpenInMacVim.app'
+let g:netrw_dirhist_5='/Users/brendan/Documents/Academic/Thesis/Appendices'
+let g:netrw_dirhist_6='/Users/brendan/Scripts/OpenInMacVim.app'
+let g:netrw_dirhist_7='/Users/brendan/Documents/Academic/Thesis'
+let g:netrw_dirhist_8='/Users/brendan/Scripts/OpenInMacVim.app'
+let g:netrw_dirhist_9='/Users/brendan/Scripts/OpenTerminalHere.app'
