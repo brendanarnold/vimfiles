@@ -61,6 +61,11 @@ function! NERDTreeQuit()
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
 
+" easier navigation between split windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 "Enable omni complete functionality
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
