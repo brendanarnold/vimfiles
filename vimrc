@@ -4,6 +4,8 @@ syntax on
 "Spelling on
 "setlocal spell spelllang=en_gb
 
+"Lets be YOONICODEE
+set encoding=utf-8
 
 "Non vi mode
 set nocompatible
@@ -61,11 +63,12 @@ function! NERDTreeQuit()
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
 
-" easier navigation between split windows
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+" If capitalised in search is case-sensitive
+set smartcase
+
+" easier navigation between lines
+nnoremap <C-J> gj
+nnoremap <C-J> gk
 
 "Enable omni complete functionality
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
