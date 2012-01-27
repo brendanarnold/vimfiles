@@ -68,7 +68,7 @@ set smartcase
 
 " easier navigation between lines
 nnoremap <C-J> gj
-nnoremap <C-J> gk
+nnoremap <C-K> gk
 
 "Enable omni complete functionality
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
