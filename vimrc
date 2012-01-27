@@ -67,8 +67,14 @@ autocmd WinEnter * call NERDTreeQuit()
 set smartcase
 
 " easier navigation between lines
-nnoremap <C-J> gj
-nnoremap <C-K> gk
+noremap <Down> gj
+noremap <Up> gk
+
+" Easier navigation between windows
+noremap <C-H> <C-W>h
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-L> <C-W>l
 
 "Enable omni complete functionality
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
