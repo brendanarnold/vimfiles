@@ -4,6 +4,9 @@ syntax on
 "Spelling on
 "setlocal spell spelllang=en_gb
 
+"Required to get snipMate plugin to work
+filetype plugin on
+
 "Lets be YOONICODEE
 set encoding=utf-8
 
@@ -21,8 +24,10 @@ set formatoptions=cq
 set textwidth=72
 
 "Search as you type and ignore case
+"If capitalised in search is case-sensitive
 set incsearch
 set ignorecase
+set smartcase
 
 "Don't create annoying backup file
 set nobackup
@@ -30,7 +35,6 @@ set nobackup
 "Some home made fun
 map <F2> :TComment<CR>
 map <F3> :call PyToggleBool()<CR>
-" map <silent> <F2> :call Co(&ft)<CR>
 map <F4> :NERDTreeToggle<CR>
 map <F5> :call ToggleTabStyle()<CR>
 map <F6> :!/usr/local/bin/ctags -R --python-kinds=+p --fields=+iaS --extra=+q .<CR>
@@ -63,18 +67,16 @@ function! NERDTreeQuit()
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
 
-" If capitalised in search is case-sensitive
-set smartcase
 
 " easier navigation between lines
-noremap <Down> gj
-noremap <Up> gk
+nnoremap <Down> gj
+nnoremap <Up> gk
 
 " Easier navigation between windows
-noremap <C-H> <C-W>h
-noremap <C-J> <C-W>j
-noremap <C-K> <C-W>k
-noremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
 
 "Enable omni complete functionality
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
