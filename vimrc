@@ -4,6 +4,8 @@ syntax on
 "Spelling on
 "setlocal spell spelllang=en_gb
 
+"Lets be YOONICODEE
+set encoding=utf-8
 
 "Non vi mode
 set nocompatible
@@ -61,40 +63,15 @@ function! NERDTreeQuit()
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
 
-" easier navigation between split windows
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+" If capitalised in search is case-sensitive
+set smartcase
+
+" easier navigation between lines
+nnoremap <C-J> gj
+nnoremap <C-J> gk
 
 "Enable omni complete functionality
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 let processing_doc_path="/Applications/Processing/Contents/Resources/Java/reference"
 
-
-:ab pysc import pylab as *
-\<CR>import os
-\<CR>import re
-\<CR>
-\<CR>INFILE = r''
-\<CR>OUTFILE = r''
-\<CR>DIR = r''
-\<CR>FILESTEM = r''
-\<CR>DELIMITER = '\t'
-\<CR>SKIPROWS = 1
-\<CR>X_COL = 0
-\<CR>Y_COL = 3
-\<CR>
-\<CR>for filename in os.listdir(DIR):
-\<CR>        # Identify the right files
-\<CR>        result = re.match(filename, FILESTEM)
-\<CR>        if result:
-\<CR>            filepath = os.path.join(DIR, filename)
-\<CR>            data = np.loadtxt(filepath, delimiter=DELIMITER, skiprows=SKIPROWS)
-\<CR>        # Plot the output
-\<CR>        figure()
-\<CR>        scatter(data[X_COL,:], data[Y_COL,:])
-\<CR>        
-\<CR>np.savetxt(OUTFILE, data, delimiter=DELIMITER, skiprows=SKIPROWS)
-\<CR>show()
