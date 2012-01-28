@@ -7,7 +7,7 @@ snippet save
 snippet pyl
 	from pylab import *
 
-snippet template Iterate Files
+snippet tmpl Iterate Files
 	import os
 
 	IN_FILE = r'${1}'
@@ -18,7 +18,7 @@ snippet template Iterate Files
 		if fn.endswith('${4:.}'):
 			fh = open(os.path.join(DATA_DIR, fn), 'r')
 			${5}
-snippet template Iterate Files Regex
+snippet tmpl Iterate Files Regex
 	import os
 	import re
 
@@ -32,7 +32,7 @@ snippet template Iterate Files Regex
 			fh = open(os.path.join(DATA_DIR, fn), 'r')
 			m = res.group(1)
 			${4}
-snippet template __init__.py
+snippet tmpl __init__.py
 	__version__ = '0.0.0'
 
 	import sys
@@ -45,7 +45,7 @@ snippet template __init__.py
 		exec('from $1 import $2')
 		exec('import config')
 
-snippet template Setup.py
+snippet tmpl Setup.py
 	from distutils.core import setup
 
 	setup(
