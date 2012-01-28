@@ -1,1 +1,2 @@
 glob:*DS_Store
+glob:*.swp

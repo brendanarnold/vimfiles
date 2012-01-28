@@ -1,3 +1,23 @@
+# Own HTML5 boilerplate
+snippet template
+	<!DOCTYPE html>
+	<html>
+	  <head>
+	    <title>${1}</title>
+
+	    <script type="text/javascript">
+		${2}
+	    </script>
+
+	    <style type="text/css">
+		${3}
+	    </style>
+
+	  </head>
+	  <body>
+	  ${4}
+	  </body>
+	</html>
 # Some useful Unicode entities
 # Non-Breaking Space
 snippet nbs
@@ -116,11 +136,11 @@ snippet head
 	</head>
 snippet title
 	<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>${2}
-snippet script
+snippet script Local
 	<script type="text/javascript" charset="utf-8">
 		${1}
 	</script>${2}
-snippet scriptsrc
+snippet script Src
 	<script src="${1}.js" type="text/javascript" charset="utf-8"></script>${2}
 snippet style
 	<style type="text/css" media="${1:screen}">

@@ -1,13 +1,44 @@
+# Lower case figure reference
+snippet fig
+	figure~\ref{Fig:${1}}${2}
+# Captialised figure reference
+snippet Fig
+	Figure~\ref{Fig:${1}}${2}
+# \textrm{}
+snippet txt
+	\textrm{${1}}${2}
+# Italic
+snippet it
+	\textit{${1}}${2}
+# Figure
+snippet figure
+	\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[scale=0.9]{${1:Misc/TODO}}
+			\caption{${2}}
+			\label{Fig:${3}}
+		\end{center}
+	\end{figure}
 # \begin{}...\end{}
 snippet begin
 	\begin{${1:env}}
 		${2}
 	\end{$1}
 # Tabular
-snippet tab
-	\begin{${1:tabular}}{${2:c}}
-	${3}
-	\end{$1}
+snippet table
+	\begin{table}
+		\begin{center}
+	       	\caption{${1}}
+			\begin{tabular}[htbp]{${2:l}}
+	\toprule
+
+	\midrule
+
+	\bottomrule
+			\label{Table:${3}}
+			\end{tabular}
+		\end{center}
+	\end{table}
 # Align(ed)
 snippet ali
 	\begin{align${1:ed}}
@@ -103,10 +134,6 @@ snippet subp
 	% subparagraph $2 (end)
 snippet itd
 	\item[${1:description}] ${2:item}
-snippet figure
-	${1:Figure}~\ref{${2:fig:}}${3}
-snippet table
-	${1:Table}~\ref{${2:tab:}}${3}
 snippet listing
 	${1:Listing}~\ref{${2:list}}${3}
 snippet section

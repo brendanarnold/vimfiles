@@ -1,3 +1,82 @@
+snippet load
+	data = np.loadtxt(${1:fn}, delimiter='${2:\t}', skiprows='${3:0}')
+	${4}
+snippet save
+	np.savetxt(${1:OUT_FILE}, ${2:data}, delimiter='${3:\t}')
+	${4}
+snippet pyl
+	from pylab import *
+
+snippet template Iterate Files
+	import os
+
+	IN_FILE = r'${1}'
+	OUT_FILE = r'${2}'
+	DATA_DIR = r'${3}'
+
+	for fn in os.listdir(DATA_DIR):
+		if fn.endswith('${4:.}'):
+			fh = open(os.path.join(DATA_DIR, fn), 'r')
+			${5}
+snippet template Iterate Files Regex
+	import os
+	import re
+
+	IN_FILE = r'${1}'
+	OUT_FILE = r'${2}'
+	DATA_DIR = r'${3:.}'
+
+	for fn in os.listdir(DATA_DIR):
+		res = re.match(IN_FILE, fn)
+		if res:
+			fh = open(os.path.join(DATA_DIR, fn), 'r')
+			m = res.group(1)
+			${4}
+snippet template __init__.py
+	__version__ = '0.0.0'
+
+	import sys
+	IS_PYTHON3 = sys.version_info[0] >= 3
+
+	if IS_PYTHON3:
+		exec('from .${1:} import ${2:}')
+		exec('from . import config')
+	else:
+		exec('from $1 import $2')
+		exec('import config')
+
+snippet template Setup.py
+	from distutils.core import setup
+
+	setup(
+		name = '${1:}',
+		packages = ['$1'],
+		version = '0.0.0',
+		description = '${2}',
+		author = 'Brendan Arnold',
+		author_email = 'brendanarnold@gmail.com',
+		url = '${3:}',
+		download_url = '$3',
+		keywords = [${4}],
+		classifiers = [
+			'Development Status :: 4 - Beta',
+			'Environment :: Console',
+			'Intended Audience :: Science/Research',
+			'Intended Audience :: Developers',
+			'License :: OSI Approved :: MIT License',
+			'Natural Language :: English',
+			'Operating System :: OS Independent',
+			'Programming Language :: Fortran',
+			'Programming Language :: Python :: 2',
+			'Programming Language :: Python :: 3',
+			'Topic :: Text Processing :: General',
+			'Topic :: Software Development :: Interpreters',
+			'Topic :: Scientific/Engineering',
+		],
+		long_description = '''
+	${5}
+	'''
+	)
 snippet #!
 	#!/usr/bin/python
 
