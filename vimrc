@@ -1,9 +1,6 @@
 "Syntax highlighting on
 syntax on
 
-"Spelling on
-"setlocal spell spelllang=en_gb
-
 "Required to get snipMate plugin to work
 filetype plugin on
 
@@ -24,7 +21,7 @@ set formatoptions=cq
 set textwidth=72
 
 "Search as you type and ignore case
-"If capitalised in search is case-sensitive
+"If capitalised in search, is case-sensitive
 set incsearch
 set ignorecase
 set smartcase
@@ -32,18 +29,19 @@ set smartcase
 "Don't create annoying backup file
 set nobackup
 
-"Some home made fun
+"Some F'ing fun
 map <F2> :TComment<CR>
-map <F3> :call PyToggleBool()<CR>
+map <F3> :setlocal spell! spelllang=en_gb<CR>:setlocal spell?<CR>
 map <F4> :NERDTreeToggle<CR>
 map <F5> :call ToggleTabStyle()<CR>
 map <F6> :!/usr/local/bin/ctags -R --python-kinds=+p --fields=+iaS --extra=+q .<CR>
+" map <F7> :call PyToggleBool()<CR>
 
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
 
 " NERDTree madness
-" autocmd VimEnter * NERDTree
 let NERDTreeIgnore = ['\.swp$', '\.pyc$']
+" autocmd VimEnter * NERDTree
 let NERDChristmasTree = 1
 " Automatically quits NERDTree when last buffer quitted
 function! NERDTreeQuit()

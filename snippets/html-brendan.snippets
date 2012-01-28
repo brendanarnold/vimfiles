@@ -1,0 +1,26 @@
+# Own HTML5 boilerplate
+snippet tmpl
+	<!DOCTYPE html>
+	<html>
+	  <head>
+	    <title>${1}</title>
+
+	    <script type="text/javascript">
+		${2}
+	    </script>
+
+	    <style type="text/css">
+		${3}
+	    </style>
+
+	  </head>
+	  <body>
+	  ${4}
+	  </body>
+	</html>
+snippet script Local
+	<script type="text/javascript" charset="utf-8">
+		${1}
+	</script>${2}
+snippet script Src
+	<script src="${1}.js" type="text/javascript" charset="utf-8"></script>${2}
