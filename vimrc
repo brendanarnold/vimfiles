@@ -7,6 +7,9 @@ filetype plugin on
 "Lets be YOONICODEE
 set encoding=utf-8
 
+"Where am I?
+set ruler
+
 "Non vi mode
 set nocompatible
 
@@ -65,10 +68,13 @@ function! NERDTreeQuit()
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
 
-
 " easier navigation between lines
+inoremap <Down> <C-R>=pumvisible() ? "\<lt>Down>" : "\<lt>C-O>gj"<CR>
+inoremap <Up> <C-R>=pumvisible() ? "\<lt>Up>" : "\<lt>C-O>gk"<CR>
 nnoremap <Down> gj
 nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
 
 " Easier navigation between windows
 nnoremap <C-H> <C-W>h

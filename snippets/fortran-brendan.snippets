@@ -1,0 +1,32 @@
+snippet tpl
+	      PROGRAM ${1:FOO}
+	      IMPLICIT NONE
+	${2}
+	      STOP
+	      END
+snippet OP
+	OPEN(${1:10}, FILE='${2:foo.dat}', STATUS='${3:old}')${4}
+snippet RE
+	READ(${1:*}, '(${2:A})') ${3:ARR}
+snippet WR
+	WRITE(${1:*}, ('${2:A}')) C${3}
+snippet CH
+	CHARACTER(LEN=${1:50}) :: ${2:ARR}
+snippet IF
+	${1:1001}  IF (${2:.TRUE.}) THEN
+	${3}
+	      ENDIF
+snippet DB 
+	DOUBLE PRECISION ${1:D}
+snippet LOG
+	LOGICAL ${1:FLAG}
+snippet LONG
+	INTEGER*8 ${1:I}
+snippet INT
+	INTEGER ${1:SHORT}
+snippet >
+	      
+snippet T
+	.TRUE.
+snippet F
+	.FALSE.
