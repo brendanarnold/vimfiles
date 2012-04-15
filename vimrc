@@ -4,6 +4,9 @@ syntax on
 "Required to get snipMate plugin to work
 filetype plugin on
 
+"Know thy filetype
+set statusline=%<%f\ %y%m%r%=%-14.(%l,%c%V%)\ %P
+
 "Lets be YOONICODEE
 set encoding=utf-8
 
