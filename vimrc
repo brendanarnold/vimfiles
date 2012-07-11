@@ -32,12 +32,16 @@ set smartcase
 "Don't create annoying backup file
 set nobackup
 
+"Change how whitespace is diaplayed
+set listchars=eol:$,tab:>-,trail:.,nbsp:.
+
 "Some F'ing fun
 map <F2> :TComment<CR>
 map <F3> :setlocal spell! spelllang=en_gb<CR>:setlocal spell?<CR>
 map <F4> :NERDTreeToggle<CR>
 map <F5> :call ToggleTabStyle()<CR>
-map <F6> :!/usr/local/bin/ctags -R --python-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <F6> :setlocal list!<CR>
+" map <F6> :!/usr/local/bin/ctags -R --python-kinds=+p --fields=+iaS --extra=+q .<CR>
 " map <F7> :call PyToggleBool()<CR>
 
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
@@ -47,6 +51,7 @@ let NERDTreeIgnore = ['\.swp$', '\.pyc$']
 " autocmd VimEnter * NERDTree
 let NERDChristmasTree = 1
 " Automatically quits NERDTree when last buffer quitted
+
 function! NERDTreeQuit()
   redir => buffersoutput
   silent buffers

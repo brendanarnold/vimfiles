@@ -17,7 +17,7 @@
         :set expandtab
         :let b:TabStyle=2
         :set wrap
-        :echo "Using Java style tabs"
+        :echo "Using Java/Python style tabs"
     :else
         :set tabstop=2
         :set shiftwidth=2
