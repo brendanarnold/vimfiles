@@ -53,8 +53,8 @@ let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
 let NERDTreeIgnore = ['\.swp$', '\.pyc$']
 " autocmd VimEnter * NERDTree
 let NERDChristmasTree = 1
+"
 " Automatically quits NERDTree when last buffer quitted
-
 function! NERDTreeQuit()
   redir => buffersoutput
   silent buffers
@@ -89,6 +89,9 @@ nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
+
+" Set default tex type to latex rather than 'plaintex'
+let g:tex_flavor = "latex"
 
 "Enable omni complete functionality
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
