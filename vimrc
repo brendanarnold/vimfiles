@@ -50,7 +50,7 @@ map <F6> :setlocal list!<CR>
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
 
 " NERDTree madness
-let NERDTreeIgnore = ['\.swp$', '\.pyc$']
+let NERDTreeIgnore = ['\.swp$', '\.pyc$', '\.$', '\.\.$']
 " autocmd VimEnter * NERDTree
 let NERDChristmasTree = 1
 "
@@ -96,5 +96,5 @@ let g:tex_flavor = "latex"
 "Enable omni complete functionality
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
 
-let processing_doc_path="/Applications/Processing/Contents/Resources/Java/reference"
+" let processing_doc_path="/Applications/Processing/Contents/Resources/Java/reference"
 
