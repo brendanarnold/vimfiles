@@ -9,6 +9,7 @@ set statusline=%<%f\ %y%m%r%=%-14.(%l,%c%V%)\ %P
 
 "Lets be YOONICODEE
 set encoding=utf-8
+set fileencoding=utf-8
 
 "Where am I?
 set ruler
@@ -75,6 +76,7 @@ function! NERDTreeQuit()
   endif
 endfunction
 autocmd WinEnter * call NERDTreeQuit()
+
 
 " easier navigation between lines
 inoremap <Down> <C-R>=pumvisible() ? "\<lt>Down>" : "\<lt>C-O>gj"<CR>
