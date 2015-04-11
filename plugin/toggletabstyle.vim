@@ -1,6 +1,6 @@
 :function ToggleTabStyle()
     :if !exists("b:TabStyle")
-        :let b:TabStyle = 0
+        :let b:TabStyle = 2
     :endif
     :if b:TabStyle == 0
         :set tabstop=8
